@@ -1,0 +1,3 @@
+com\workflow\textExtraction\TextExtraction.class
+com\workflow\textExtraction\ProcessEmail.class
+com\workflow\textExtraction\TextExtractionBeanInfo.class

@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>SalientTextExtraction</groupId>
+  <artifactId>SalientTextExtraction</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+		<!-- <plugin>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <mainClass>com.salientprocess.textExtraction.TextExtraction</mainClass>
+                    </manifest>
+                </archive>
+                <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
+            </configuration>
+        </plugin> -->
+		<plugin> 
+    		<artifactId>maven-dependency-plugin</artifactId> 
+    		<executions> 
+      			<execution> 
+        			<phase>install</phase> 
+       				<goals> 
+         				<goal>copy-dependencies</goal> 
+       				</goals> 
+       				<configuration> 
+          				<outputDirectory>${project.build.directory}/lib</outputDirectory> 
+       				</configuration> 
+        		</execution> 
+			</executions> 
+    	</plugin>         
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version> 
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+	<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+	<dependency>
+	    <groupId>org.apache.pdfbox</groupId>
+	    <artifactId>pdfbox</artifactId>
+	    <version>3.0.2</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
+	<dependency>
+	    <groupId>net.sourceforge.tess4j</groupId>
+	    <artifactId>tess4j</artifactId>
+	    <version>5.11.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>net.lingala.zip4j</groupId>
+	    <artifactId>zip4j</artifactId>
+	    <version>2.11.5</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.tika/tika-core -->
+	<dependency>
+	    <groupId>org.apache.tika</groupId>
+	    <artifactId>tika-core</artifactId>
+	    <version>2.9.2</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.tika/tika-parser-microsoft-module -->
+	<dependency>
+	    <groupId>org.apache.tika</groupId>
+	    <artifactId>tika-parser-microsoft-module</artifactId>
+	    <version>2.9.2</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+	<dependency>
+	    <groupId>com.google.code.gson</groupId>
+	    <artifactId>gson</artifactId>
+	    <version>2.11.0</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+	<dependency>
+	    <groupId>javax.mail</groupId>
+	    <artifactId>mail</artifactId>
+	    <version>1.5.0-b01</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-email</artifactId>
+	    <version>1.6.0</version>
+	</dependency>
+  </dependencies>
+</project>

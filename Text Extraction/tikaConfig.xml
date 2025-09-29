@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<!--  <parsers>
+    <parser class="org.apache.tika.parser.DefaultParser">
+      <mime>application/x-tika-msoffice</mime>
+	  <mime>application/msword</mime>
+      <parser-exclude class="org.apache.tika.parser.EmptyParser"/>
+    </parser>
+    <parser class="org.apache.tika.parser.EmptyParser">
+      <mime-exclude>application/x-tika-msoffice</mime-exclude>
+	  <mime-exclude>application/msword</mime-exclude>
+    </parser>-->
+    <!-- <parser class="org.apache.tika.parser.microsoft.xml.WordMLParser"> 
+	<parser class="org.apache.tika.parser.microsoft.ooxml.xwpf.ml2006.Word2006MLParser">
+      <mime>application/x-tika-msoffice</mime>
+	  <mime>application/msword</mime>
+    </parser>
+  </parsers>-->
+  <service-loader dynamic="true"/>
+  <service-loader loadErrorHandler="THROW"/>
+</properties>
